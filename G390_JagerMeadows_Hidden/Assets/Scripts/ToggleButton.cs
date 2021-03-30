@@ -8,7 +8,9 @@ public class ToggleButton : MonoBehaviour
     public Material defaultMaterial;
     public Material secondMaterial;
     public Material buttonMaterial;
-    
+
+    [SerializeField] AudioClip buttonHigh;
+    [SerializeField] AudioClip buttonLow;
     [SerializeField] private List<Transform> Surfaces;
     [SerializeField] private List<Transform> SecondSurfaces;
     [SerializeField] private List<Transform> ButtonHider;
@@ -16,6 +18,7 @@ public class ToggleButton : MonoBehaviour
     //private variables
     bool isDefaultMat;
     bool isSecondMat;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,7 @@ public class ToggleButton : MonoBehaviour
         //set initial material
         
         isDefaultMat = true;
+        audioSource = GetComponent<AudioSource>();
     }
 
     //when something enters the trgger
@@ -34,6 +38,8 @@ public class ToggleButton : MonoBehaviour
             //and if the current mat is default, switch to the second mat
             if (isDefaultMat == true)
             {
+                audioSource.clip = buttonHigh;
+                audioSource.Play();
                 isDefaultMat = false;
                 foreach (Transform Tform in Surfaces)
                 {
@@ -52,6 +58,8 @@ public class ToggleButton : MonoBehaviour
             //but if the current mat is the second mat, switch to default
             else if (isDefaultMat == false)
             {
+                audioSource.clip = buttonLow;
+                audioSource.Play();
                 isDefaultMat = true;
                 foreach (Transform Tform in Surfaces)
                 {

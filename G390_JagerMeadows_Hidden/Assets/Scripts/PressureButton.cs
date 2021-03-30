@@ -9,6 +9,8 @@ public class PressureButton : MonoBehaviour
     public Material secondMaterial;
     public Material buttonMaterial;
 
+    [SerializeField] AudioClip buttonHigh;
+    [SerializeField] AudioClip buttonLow;
     [SerializeField] private List<Transform> Surfaces;
     [SerializeField] private List<Transform> SecondSurfaces;
     [SerializeField] private List<Transform> ButtonHider;
@@ -16,6 +18,7 @@ public class PressureButton : MonoBehaviour
     //private variables
     bool isDefaultMat;
     bool isSecondMat;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,7 @@ public class PressureButton : MonoBehaviour
         //set initial material
         
         isDefaultMat = true;
+        audioSource = GetComponent<AudioSource>();
     }
 
     //when something enters the trgger
@@ -34,6 +38,8 @@ public class PressureButton : MonoBehaviour
             //and if the current mat is default, switch to the second mat
             if (isDefaultMat == true)
             {
+                audioSource.clip = buttonHigh;
+                audioSource.Play();
                 isDefaultMat = false;
                 foreach (Transform Tform in Surfaces)
                 {
@@ -51,6 +57,8 @@ public class PressureButton : MonoBehaviour
             //but if the current mat is the second mat, switch to default
             else if (isDefaultMat == false)
             {
+                audioSource.clip = buttonLow;
+                audioSource.Play();
                 isDefaultMat = true;
                 foreach (Transform Tform in Surfaces)
                 {
@@ -76,6 +84,8 @@ public class PressureButton : MonoBehaviour
             //and if the current mat is default, switch to the second mat
             if (isDefaultMat == true)
             {
+                audioSource.clip = buttonHigh;
+                audioSource.Play();
                 isDefaultMat = false;
                 foreach (Transform Tform in Surfaces)
                 {
@@ -93,6 +103,8 @@ public class PressureButton : MonoBehaviour
             //but if the current mat is the second mat, switch to default
             else if (isDefaultMat == false)
             {
+                audioSource.clip = buttonLow;
+                audioSource.Play();
                 isDefaultMat = true;
                 foreach (Transform Tform in Surfaces)
                 {
