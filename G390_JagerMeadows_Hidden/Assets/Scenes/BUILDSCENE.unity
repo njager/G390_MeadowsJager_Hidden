@@ -648,7 +648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afcb6eb171556d498d5f4d037d151b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Activated: 0
 --- !u!135 &13624647
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2621,7 +2620,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 130ae01e0c8369946a5a0776f45b6c05, type: 2}
+  - {fileID: 2100000, guid: f02cd747378b7a343bad07eeba1eb59a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7141,7 +7140,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 130ae01e0c8369946a5a0776f45b6c05, type: 2}
+  - {fileID: 2100000, guid: f02cd747378b7a343bad07eeba1eb59a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8184,7 +8183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afcb6eb171556d498d5f4d037d151b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Activated: 0
 --- !u!135 &319657234
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -31729,7 +31727,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afcb6eb171556d498d5f4d037d151b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Activated: 0
 --- !u!135 &1568888099
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -33756,7 +33753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afcb6eb171556d498d5f4d037d151b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Activated: 0
 --- !u!135 &1634950481
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -36123,7 +36119,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 130ae01e0c8369946a5a0776f45b6c05, type: 2}
+  - {fileID: 2100000, guid: f02cd747378b7a343bad07eeba1eb59a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -38599,7 +38595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848291166}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -44.7, y: 30.9, z: -0.7}
+  m_LocalPosition: {x: -44.7, y: 8.6, z: -0.7}
   m_LocalScale: {x: 5.872512, y: 3.9331, z: 2.718028}
   m_Children: []
   m_Father: {fileID: 262957303}
@@ -38929,7 +38925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afcb6eb171556d498d5f4d037d151b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Activated: 0
 --- !u!135 &1858490258
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -43591,7 +43586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afcb6eb171556d498d5f4d037d151b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Activated: 0
 --- !u!135 &2061772778
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -44617,7 +44611,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 130ae01e0c8369946a5a0776f45b6c05, type: 2}
+  - {fileID: 2100000, guid: f02cd747378b7a343bad07eeba1eb59a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
