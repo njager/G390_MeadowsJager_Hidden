@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class CheckPoint : MonoBehaviour
+public class CheckPoint : MonoBehaviour 
 {
     #region Public Variables
 
@@ -15,7 +15,7 @@ public class CheckPoint : MonoBehaviour
 
     #region Private Variables
 
-    
+    private Animator thisAnimator;
 
     #endregion
 
@@ -29,7 +29,7 @@ public class CheckPoint : MonoBehaviour
     #endregion
 
     #region Static Functions
-
+    
     /// <summary>
     /// Get position of the last activated checkpoint
     /// </summary>
@@ -68,19 +68,19 @@ public class CheckPoint : MonoBehaviour
         foreach (GameObject cp in CheckPointsList)
         {
             cp.GetComponent<CheckPoint>().Activated = false;
-           
+            cp.GetComponent<Animator>().SetBool("Active", false);
         }
 
         // We activated the current checkpoint
         Activated = true;
-        
+        thisAnimator.SetBool("Active", true);
     }
 
     #endregion
 
     void Start()
     {
-       
+        thisAnimator = GetComponent<Animator>();
 
         // We search all the checkpoints in the current scene
         CheckPointsList = GameObject.FindGameObjectsWithTag("CheckPoint").ToList();
