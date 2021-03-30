@@ -7,7 +7,8 @@ public class ToggleButton : MonoBehaviour
     //public variables
     public Material defaultMaterial;
     public Material secondMaterial;
-    public MeshRenderer subject;
+    
+    [SerializeField] private List<Transform> Surfaces;
 
     //private variables
     bool isDefaultMat;
@@ -17,7 +18,7 @@ public class ToggleButton : MonoBehaviour
     void Start()
     {
         //set initial material
-        subject.material = defaultMaterial;
+        
         isDefaultMat = true;
     }
 
@@ -30,14 +31,22 @@ public class ToggleButton : MonoBehaviour
             //and if the current mat is default, switch to the second mat
             if (isDefaultMat == true)
             {
-                subject.material = secondMaterial;
-                isDefaultMat = false;
+                foreach (Transform Tform in Surfaces)
+                {
+                    Tform.GetComponent<MeshRenderer>().material = secondMaterial;
+                    isDefaultMat = false;
+                }
+                
             }
             //but if the current mat is the second mat, switch to default
             else if (isDefaultMat == false)
             {
-                subject.material = defaultMaterial;
-                isDefaultMat = true;
+                foreach (Transform Tform in Surfaces)
+                {
+                    Tform.GetComponent<MeshRenderer>().material = defaultMaterial;
+                    isDefaultMat = true;
+                }
+                
             }
         }
     }
